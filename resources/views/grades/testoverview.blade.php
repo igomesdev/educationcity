@@ -12,6 +12,7 @@
                 <th>English</th>
                 <th>Math</th>
                 <th>Science</th>
+                <th>Average Score</th>
             </tr>
 
             @foreach($grades as $grade)
@@ -21,6 +22,7 @@
                     <td> {{ $grade->english }}</td>
                     <td> {{ $grade->math }}</td>
                     <td> {{ $grade->science }}</td>
+                    <td> {{ $grade->average }}</td>
                 </tr>
             @endforeach
         </table>

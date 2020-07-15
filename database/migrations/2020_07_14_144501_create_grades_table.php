@@ -20,6 +20,7 @@ class CreateGradesTable extends Migration
             $table->float('english')->nullable();
             $table->float('math')->nullable();
             $table->float('science')->nullable();
+            $table->float('average')->nullable();
             $table->timestamps();
             $table->index('student_id');
         });

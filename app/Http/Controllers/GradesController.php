@@ -56,6 +56,7 @@ class GradesController extends Controller
         $stGrade->english = $data['english'];
         $stGrade->math = $data['math'];
         $stGrade->science = $data['science'];
+        $stGrade->average = ($data['english'] + $data['science'] + $data['math']) / 3;
         $stGrade->save();
 
         return redirect('/grade/testoverview');
@@ -69,8 +70,13 @@ class GradesController extends Controller
      */
     public function show()
     {
-        $grades = grade::all();
+        $grades = Grade::orderBy('average', 'desc')->get();
         $students = student::all();
+
+
+
+
+
 
         return view('grades.testoverview', [
             'grades' => $grades,

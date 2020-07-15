@@ -11,7 +11,7 @@
                     <th>English</th>
                     <th>Science</th>
                     <th>Math</th>
-                    <th>Average</th>
+                    <th>Average Score</th>
                 </tr>
 
             @foreach($students as $student)
