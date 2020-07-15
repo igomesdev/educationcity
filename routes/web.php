@@ -20,3 +20,17 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//students
+Route::get('/student/overview', 'StudentsController@show');
+
+Route::get('/student/create', 'StudentsController@create');
+
+Route::post('/home', 'StudentsController@store');
+
+//grades
+Route::get('/grade/testoverview', 'GradesController@show');
+
+Route::get('/grade/create', 'GradesController@create');
+
+Route::post('/grade/testoverview', 'GradesController@store');
