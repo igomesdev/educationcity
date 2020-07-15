@@ -14,7 +14,7 @@ class StudentsController extends Controller
 
     public function show()
     {
-        $students = Student::orderBy('name', 'desc')->get();
+        $students = Student::orderBy('name', 'asc')->get();
 
         return view('students.overview', [
             'students' => $students,
