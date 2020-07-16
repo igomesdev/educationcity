@@ -73,11 +73,6 @@ class GradesController extends Controller
         $grades = Grade::orderBy('average', 'desc')->get();
         $students = student::all();
 
-
-
-
-
-
         return view('grades.testoverview', [
             'grades' => $grades,
             'students' => $students
